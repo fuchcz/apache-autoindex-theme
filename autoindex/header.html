@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="/autoindex/icons/quill.png">
+  <link rel="stylesheet" href="/autoindex/css/style.css">
+  <script type="text/javascript" src="/autoindex/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    var location = document.location.pathname;
+    var segments = location.split("/");
+    var breadcrumbs = '/ ';
+    var currentPath = "/";
+    for (var i=0; i<segments.length; i++) {
+      if (segments[i] != '') {
+        currentPath += segments[i] + '/';
+        breadcrumbs += '<a href="' +  currentPath + '">' + segments[i] + '</a> / ';
+      }
+    }
+    $("#domain").html(document.domain);
+    $('#path').html(breadcrumbs);
+    $('hr').parent().remove();
+
+    var columns = $('th');
+    $(columns[0]).addClass('icon');
+    $(columns[1]).addClass('name');
+    $(columns[columns.length-1]).addClass('size');
+    $(columns[columns.length-2]).addClass('date');
+    $('#refresh > a').click(function(){window.location.reload(true);return false;});
+    $('td[align="right"]').addClass('smaller'); 
+    $("tr:odd").css("background-color", "#fafafa");
+    $('[alt="[DIR]"]').parent().add('#path a, #home a, #up a').add($('[alt="[DIR]"]').parent().parent().next().children('a')).attr("href", function(i, href) { return href.indexOf('?') === -1 ? href + document.location.search : href; });
+  });
+  </script>
+  <div id="container">
+    <div id="header">
+      <img src="/autoindex/icons/quill.png"><span id="domain"></span>
+      <div id="refresh"><a href="#"><img src="/autoindex/icons/arrow-circle-315.png"/></a></div>
+      <div id="up"><a href="../"><img src="/autoindex/icons/arrow-090.png"/></a></div>
+      <div id="home"><a href="/"><img src="/autoindex/icons/home.png"/></a></div>
+    </div>
+    <div id="path"></div>
+    <div id="files">

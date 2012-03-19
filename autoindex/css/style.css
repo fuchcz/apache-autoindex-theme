@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'UbuntuRegular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/autoindex/font/ubuntu-r-webfont.eot');
+    src: url('/autoindex/font/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'), url('/autoindex/font/ubuntu-r-webfont.woff') format('woff'), url('/autoindex/font/ubuntu-r-webfont.ttf') format('truetype'), url('/autoindex/font/ubuntu-r-webfont.svg#UbuntuRegular') format('svg');
+}
+* {
+    font-family: 'UbuntuRegular', sans-serif;
+    font-size: 0.964em;
+}
+body {
+    background-color: #edeae1;
+    text-align: center;
+}
+img {
+    border: 0;
+}
+a, a:visited {
+    color: #4d4d4d;
+}
+.date {
+    text-align: right;
+    width: 18%;
+}
+.icon {
+    width: 25px;
+}
+.name {
+    text-align: left;
+}
+.size {
+    text-align: right;
+    width: 12%;
+}
+.smaller {
+    color: #777777;
+    font-size: 0.8em;
+    padding-right: 4px;
+}
+#container {
+    margin: 0 auto;
+    max-width: 960px;
+}
+#files {
+    background-color: white;
+    border: #d6d4cf 1px solid;
+}
+#files tr td img {
+    padding-left: 5px
+}
+#files table, #files tbody {
+    text-align: left;
+    width: 100%;
+}
+#files img {
+    position: relative;
+    top: 2px;
+}
+#files a {
+    padding-bottom: 4px;
+    text-decoration: none;
+}
+#files a:hover {
+    text-decoration: underline;
+}
+#footer {
+    color: #b9b7b3;
+    font-size: 0.7em;
+    padding: 3px;
+    text-align: right;
+}
+#footer a {
+    color: #b9b7b3;
+    text-decoration: none;
+}
+#header {
+    background-color: #6f6d68;
+    border: #565550 1px solid;
+    color: #e4e2dd;
+    line-height: 30px;
+    padding-top: 2px;
+    text-align: left;
+}
+#header img {
+    padding: 0 8px 0 8px;
+    position: relative;
+    top: 3px;
+}
+#home {
+    float: right;
+    padding-right: 3px;
+}
+#path {
+    background-color: #f2e3ce;
+    border: #d6d4cf 1px solid;
+    color: #030207;
+    font-size: 0.85em;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding-left: 33px;
+    text-align: left;
+}
+#refresh {
+    float: right;
+}
+#up {
+    float: right;
+}
