@@ -1,3 +1,5 @@
+*This theme is quite outdated, use [Simple theme](https://github.com/fuchcz/simple-apache-directory-listing-theme) instead :)*
+
 # APACHE AUTOINDEX THEME
 
 Theme for Apache directory & file listings.
